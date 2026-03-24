@@ -45,7 +45,7 @@ public class SecurityConfig {
                     response.getWriter().write("{\"message\":\"Authentication required\"}");
                 }))
                 .addFilterBefore(sessionTokenAuthenticationFilter, UsernamePasswordAuthenticationFilter.class);
-
+    
         return http.build();
     }
 
