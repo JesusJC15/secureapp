@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Application Lab</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <main class="layout">
+        <section class="hero">
+            <p class="eyebrow">Enterprise Architecture Workshop</p>
+            <h1>Secure Application Design</h1>
+            <p class="lead">
+                Static client served by Apache over TLS. Secure REST API served by Spring Boot over TLS.
+                Authentication is handled with hashed passwords and Bearer tokens.
+            </p>
+            <div id="message-panel" class="message" data-type="info">Waiting for the first request.</div>
+        </section>
+
+        <section class="grid">
+            <article class="card">
+                <h2>Register</h2>
+                <form id="register-form" class="stack">
+                    <label>
+                        Username
+                        <input type="text" name="register-username" minlength="4" maxlength="30" required>
+                    </label>
+                    <label>
+                        Display name
+                        <input type="text" name="register-display-name" maxlength="120" required>
+                    </label>
+                    <label>
+                        Password
+                        <input type="password" name="register-password" minlength="8" maxlength="72" required>
+                    </label>
+                    <button type="submit">Create account</button>
+                </form>
+            </article>
+
+            <article class="card">
+                <h2>Login</h2>
+                <form id="login-form" class="stack">
+                    <label>
+                        Username
+                        <input type="text" name="login-username" required>
+                    </label>
+                    <label>
+                        Password
+                        <input type="password" name="login-password" required>
+                    </label>
+                    <button type="submit">Login</button>
+                </form>
+                <p id="session-panel" class="meta">No active session.</p>
+            </article>
+
+            <article class="card">
+                <h2>Public API</h2>
+                <pre id="public-info">{}</pre>
+            </article>
+
+            <article class="card">
+                <h2>Protected API</h2>
+                <div class="actions">
+                    <button id="load-profile" type="button">Load profile</button>
+                    <button id="load-status" type="button">Load secure status</button>
+                    <button id="logout" type="button" class="secondary">Logout</button>
+                </div>
+                <pre id="secure-info">{}</pre>
+            </article>
+        </section>
+    </main>
+
+    <script src="./config.js"></script>
+    <script src="./app.js"></script>
+</body>
+</html>

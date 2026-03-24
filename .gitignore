@@ -34,3 +34,6 @@ build/
 
 ### Maven ###
 .mvn/
+.m2/
+data/
+tmp_*.txt
