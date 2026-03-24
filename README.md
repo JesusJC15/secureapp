@@ -17,7 +17,6 @@ This repository contains a complete base solution for the secure application wor
 - `src/main/java/`: Spring Boot backend.
 - `docs/architecture.md`: architecture design document.
 - `docs/aws-deployment.md`: AWS and TLS deployment guide.
-- `docs/video-checklist.md`: suggested script for the final demo video.
 
 ## Simplified Architecture
 
@@ -92,13 +91,5 @@ High-level flow:
 5. Start Spring on `127.0.0.1:5000` with TLS enabled.
 6. Let Apache proxy `/api` to the local Spring service.
 
-## Evidence to Include in the Final Submission
-
-- GitHub repository with this codebase and your deployment notes.
-- Updated README with the final public URLs and screenshots.
-- Screenshots proving:
-  - Apache loads the client over HTTPS.
-  - Login works.
-  - Protected requests reach Spring over HTTPS.
-  - Apache and Spring are both using TLS on the same EC2.
-- A short demo video using the checklist in [docs/video-checklist.md](/C:/Users/jesjc/OneDrive/Documentos/secureapp/docs/video-checklist.md).
+## Evidence Video
+[Video evidencia]()

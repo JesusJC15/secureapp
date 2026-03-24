@@ -74,8 +74,8 @@ sudo systemctl status secureapp
 
 Important directives:
 
-- `ProxyPass /api https://127.0.0.1:5000/api`
-- `ProxyPassReverse /api https://127.0.0.1:5000/api`
+- `ProxyPass /api/ https://127.0.0.1:5000/api/`
+- `ProxyPassReverse /api/ https://127.0.0.1:5000/api/`
 - `SSLProxyEngine on`
 - `SSLProxyCheckPeerName off`
 
@@ -84,15 +84,6 @@ After copying the config:
 ```bash
 sudo apachectl configtest
 sudo systemctl restart httpd
-```
-
-## 7. Validation Checklist
-
-Run these checks and capture screenshots:
-
-```bash
-curl -I https://arepecilab.duckdns.org
-curl https://arepecilab.duckdns.org/api/public/info
 ```
 
 Then from the browser:
